@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 12: Using color safely - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_11_skipping_over_navigation_links.html" title="Day 11: Skipping over navigation links" />
-<link rel="next" href="day_13_using_real_links.html" title="Day 13: Using real links" />
-
+  <link rel="prev" href="day_11_skipping_over_navigation_links.html" title="Day 11: Skipping over navigation links" />
+  <link rel="next" href="day_13_using_real_links.html" title="Day 13: Using real links" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 12: Using color safely</h2>
 <p class="firstparagraph">This tip is a general rule that applies to many areas of web design, but I will focus on a specific example that is common among weblogs: link text.</p>
 
@@ -41,7 +34,6 @@
 <p>The second potential problem is the link decoration.  If your <acronym title="cascading style sheet">CSS</acronym> redefines a rule to make your links a different color, you need to make sure that the links are also distinguishable in some other way, like bold, italic, or underline.  Otherwise, the link text might be perfectly readable, but colorblind people won't be able to tell that it's a link.  This is illustrated below.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_2_michael.html">Michael</a> benefits.  Here is a sample screenshot of three different decoration schemes for links.</p>
 <p><img alt="Picture of three links using various color schemes, description follows" src="images/linkcolor.gif" width="325" height="90" /></p>
@@ -54,7 +46,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>To check for "sufficient contrast" between your text color and background color, use <a href="http://www.vischeck.com/vischeck/">VisCheck</a> to simulate what your web page looks like to a colorblind reader.</p>
 
 <p>To check for link decoration problems, look at your <acronym title="cascading style sheets">CSS</acronym> rules for "<code>a</code>" tags.  For example, if you have a rule like this in your <acronym title="cascading style sheets">CSS</acronym>, then your links are <em>only</em> distinguished by their redness, which is no good:</p>
@@ -77,7 +68,6 @@
 </blockquote>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><a href="http://www.vischeck.com/vischeck/">VisCheck</a> simulates colorblindness and allows you to see what colorblind people see.  You can check a single image or an entire web page.</li>
 <li><cite>Cal Henderson</cite>: <a href="http://www.iamcal.com/toys/colors/">Color Vision</a>.  Shows the color spectrum as seen by people with various types of colorblindness.</li>

@@ -1,45 +1,37 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 27: Using real headers - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes" />
-<link rel="next" href="day_28_labeling_form_elements.html" title="Day 28: Labeling form elements" />
-
+  <link rel="prev" href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes" />
+  <link rel="next" href="day_28_labeling_form_elements.html" title="Day 28: Labeling form elements" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 27: Using real headers</h2>
 <p class="firstparagraph">Think of your web site as an outline.  The top level is labeled by your site name.  On your home page, you list entries from several days.  So the second level is labeled by your date descriptions: "Tuesday, July 16, 2002", or something similar.  On each day, you make multiple posts, which may each have their own title.  If so, then you have a third level, labeled by your individual post titles.</p>
 
 <p>Now mark up your web site as an outline, using real <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> tags.  Screen readers rely on these tags to interpret the structure of your pages.  Your pages <em>do have</em> a structure, but without proper header tags, screen readers can't find it.  In a minute, I'll show you how to use CSS to make your headers look the same in visual browsers as whatever <code>&lt;font&gt;</code>-based monstrosity you're currently using.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  As soon as Jackie hits your page, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> announces that the page has a certain number of links and a certain number of headers.  Jackie can type <kbd>INSERT+F6</kbd> to hear all the headers on your page, or <kbd>CTRL+INSERT+ENTER</kbd> to quickly navigate through your page by skipping to the next header.</li>
 <li><a href="day_2_michael.html">Michael</a> benefits.  In <a href="http://www.opera.com/">Opera</a>, he can type <kbd>S</kbd> to skip to the next header, or <kbd>W</kbd> to skip to the previous one.</li>
@@ -47,7 +39,6 @@
 </ol>
 
 <h3>How to do it: Movable Type</h3>
-
 <ol>
 <li><p>Define the styles for your site logo.  In your Stylesheet template (<code>styles-sites.css</code>), add the following lines:</p>
 
@@ -115,7 +106,6 @@ h1 {font-size: 100%}
 </ol>
 
 <h3>How to do it: Radio</h3>
-
 <ol>
 <li><p>Define your header styles.  The default Radio themes don't use any real header tags, so we'll need to define these styles ourselves.  (Tailor to suit, but these examples should make your page look the same as it used to in visual browsers.)</p>
 <p>Actually, before we start, search your Home Page Template for "<code>h2 {</code>".  If you find a rule like this, remove it; it's not actually used anywhere, and it'll get in our way:</p>
@@ -191,7 +181,6 @@ html>body h2 {
 </ol>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Shirley Kaiser</cite>: <a href="http://www.brainstormsandraves.com/2002_05_12_archive.shtml#76539537">Don't Fake Your Markup</a>: Accessibility Issues for CSS.</li>
 </ul>

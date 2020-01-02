@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 10: Presenting your main content first - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_9_providing_additional_navigation_aids.html" title="Day 9: Providing additional navigation aids" />
-<link rel="next" href="day_11_skipping_over_navigation_links.html" title="Day 11: Skipping over navigation links" />
-
+  <link rel="prev" href="day_9_providing_additional_navigation_aids.html" title="Day 9: Providing additional navigation aids" />
+  <link rel="next" href="day_11_skipping_over_navigation_links.html" title="Day 11: Skipping over navigation links" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 10: Presenting your main content first</h2>
 <p class="firstparagraph">One of the main advantages of using a purely <acronym title="cascading style sheets">CSS</acronym>-based layout is that it is easy to rearrange elements within your <acronym title="hypertext markup language">HTML</acronym> source without affecting the visual layout, so that your main content displays while the rest of the page is still loading.  However, I am aware that most web sites still use table-based layouts, so this tip is for you.</p>
 
@@ -48,7 +41,6 @@
 <p>You do not need to redesign your entire template from scratch to avoid this problem.  There is a (relatively) simple technique, affectionately called the "table trick", that can present your main content first, while still keeping your navigation bar on the left side.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_5_marcus.html">Marcus</a> benefits.  As demonstrated by the examples above, Lynx displays content in the order in which it appears in the <acronym title="hypertext markup language">HTML</acronym> source.  This means Marcus must scroll through your entire navigation bar <em>every time he visits your page</em>.  Scrolling sucks.</li>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a>, like Lynx, presents content in the order in it appears in the <acronym title="hypertext markup language">HTML</acronym> source code, not the order they appear on screen.  With JAWS, the problem is even worse, because Jackie must sit through JAWS <em>reading your entire navigation bar</em> before hearing any real content, and there is no sure-fire way to jump straight to the main content.  (We'll talk more about this problem on Monday.)</li>
@@ -56,7 +48,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>View your own site in the <a href="http://www.delorie.com/web/lynxview.html">Lynx Viewer</a> and see if your daily posts are displayed first, before your navigation bar.  The Movable Type default template gets it right; if you use the default template or something based on it, you probably do not need to do anything.  But view your site in the Lynx Viewer anyway, because it will give you a deeper understanding of the issues involved.</p>
 
 <p>If you are using one of the default Radio templates, you may need to adjust your tables to put your main content first.  There is no specific copy-and-paste way to do this; you will have to dig into your own template and look at the table structure.  The <a href="examples/notabletrick.html">sample layout</a> and <a href="examples/tabletrick.html">modified sample layout</a> show the basic technique.</p>
@@ -93,7 +84,6 @@
 &lt;/table&gt;</code></pre></blockquote>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><a href="http://www.delorie.com/web/lynxview.html">Lynx Viewer</a>.</li>
 <li><cite>A Promotion Guide</cite>: <a href="http://www.apromotionguide.com/tabletrick.html">The Table Trick</a>.</li>

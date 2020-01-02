@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 16: Not opening new windows - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts" />
-<link rel="next" href="day_17_defining_acronyms.html" title="Day 17: Defining acronyms" />
-
+  <link rel="prev" href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts" />
+  <link rel="next" href="day_17_defining_acronyms.html" title="Day 17: Defining acronyms" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 16: Not opening new windows</h2>
 <p class="firstparagraph">The one thing every web user understands is the "Back" button.  It's an integral part of browsing the web.  Follow a link, go back.  Explore a search engine result, go back.  Even my father can do this, and he's still excited when he can double-click the "Internet" icon successfully on the first try.</p>
 
@@ -41,7 +34,6 @@
 <p>Please note that this tip is about you as a web designer, not you as a web user.  If <em>you</em> want to open new windows while <em>you</em> browse, go right ahead.  In Internet Explorer for Windows, hold down the <kbd>Shift</kbd> key while you click a link to open the link in a new window.  In Netscape 6 and Mozilla, hold down <kbd>Control</kbd>.  In Internet Explorer for Mac, hold down <kbd>Command</kbd>.  (Some browsers such as Opera support advanced combinations like <kbd>Control</kbd> + <kbd>Shift</kbd> + click to open a link in a new window in the background.)  The point is that the choice of whether a link will open in a new window should be the end user's choice, not the web designer's choice.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_1_jackie.html">Jackie</a> benefits.  Although <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> does announce "New browser window" when a link opens a new window, this is easy to miss, as it is spoken wedged between the reading of the link text and reading of the new page.  <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> has a better solution; it plays a distinctive sound every time a new window opens.  And <a href="http://www.gwmicro.com/windoweyes/windoweyes.htm">Window Eyes</a>, another popular screen reader, gives no indication of new windows at all.</p>
 <p>And regardless, the "Back" button is still broken.  If Jackie misses the "new browser window" announcement, she can not simply glance at her taskbar and see that two browser windows are open.  She will need to read through her entire list of open windows, either using the JAWS-specific shortcut <kbd>INSERT+F10</kbd> to get a window list, or the standard <kbd>ALT+TAB</kbd>.</p></li>
@@ -50,7 +42,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <ol>
 <li>Don't use <code class="sgmltag">&lt;a target="_blank"&gt;</code> to force links to open in a new window.</li>
 <li>If you absolutely must open a link in a new window, explicitly warn the reader.  This is a non-optimal, compromise solution, usually brought about by business requirements of "not being associated" with external content.  For example, <a href="http://www.cnn.com/US/sites.html">CNN's "related sites" page</a> does this.</li>
@@ -58,7 +49,6 @@
 </ol>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite title="Useit.com">Jakob Nielsen</cite>: <a href="http://www.useit.com/alertbox/990530.html">The Top Ten <em>New</em> Mistakes of Web Design</a>.  "#1: Breaking or Slowing Down the Back Button.  #2: Opening New Browser Windows."</li>
 <li><cite>W3C Web Accessibility Initiative</cite>: <a href="http://www.w3.org/WAI/wcag-curric/sam77-0.htm">Example for Checkpoint 10.1</a> gives an example of how to warn users if you have a single link that you absolutely must open in a new window.</li>

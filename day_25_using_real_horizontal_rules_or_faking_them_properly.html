@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 25: Using real horizontal rules (or faking them properly) - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_24_providing_text_equivalents_for_image_maps.html" title="Day 24: Providing text equivalents for image maps" />
-<link rel="next" href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes" />
-
+  <link rel="prev" href="day_24_providing_text_equivalents_for_image_maps.html" title="Day 24: Providing text equivalents for image maps" />
+  <link rel="next" href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 25: Using real horizontal rules (or faking them properly)</h2>
 <p class="firstparagraph">Suppose you want a divider between your posts.  Regular horizontal rules (<code class="sgmltag">&lt;hr&gt;</code> tags) are boring, so you use an image instead.  This works, and can easily be made more accessible with the addition of proper <code>alt</code> text.</p>
 
@@ -41,7 +34,6 @@
 <p>I'll give examples of both techniques in a minute.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  <a href="day_21_ignoring_spacer_images.html" title="Day 21: Ignoring spacer images">As we've already seen</a>, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> reads the filename of any image without an <code>alt</code> attribute.</li>
 <li><a href="day_5_marcus.html">Marcus</a> benefits.  <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> displays the filename of any image without an <code>alt</code> attribute.  If you use a real horizontal rule, Lynx will render it as a series of underscores as wide as the current screen.</li>
@@ -49,7 +41,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>If you use images as horizontal rules, the easiest way to make them accessible is add an <code>alt</code> attribute to your <code class="sgmltag">&lt;img&gt;</code> tag.  You should add an empty <code>title</code> attribute too, to suppress the tooltip in visual browsers.  So if you have this:</p>
 
 <blockquote>
@@ -65,7 +56,6 @@
 <p>Do not go crazy and specify 80 dashes for the <code>alt</code> text.  Two or three will suffice.</p>
 
 <h3>How to do it: advanced</h3>
-
 <p>The advanced (and preferred) technique uses an actual <code class="sgmltag">&lt;hr&gt;</code> tag.  However, since browser support for styling <code class="sgmltag">&lt;hr&gt;</code> tags directly is flaky at best, we'll use a dummy <code class="sgmltag">&lt;div&gt;</code> tag to display the image.  Put the following CSS in your <code>&lt;style&gt;</code> section at the top of your template.  (If you're using an external stylesheet like <code>style-sites.css</code>, put it anywhere in there.  If you're using multiple stylesheets, put it in the Netscape 4-friendly one.)</p>
 
 <blockquote>
@@ -100,7 +90,6 @@ hr {display:none}
 </ul>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><a href="http://www.v2studio.com/k/css/n4hide/">Hiding CSS From Netscape 4</a> without using additional stylesheets.  This is the technique we used above, in the advanced example.</li>
 <li><a href="http://ppewww.ph.gla.ac.uk/~flavell/www/hrstyle.html">CSS1 and the Decorative HR</a>, if you're feeling particularly brave and want to style decorative horizontal rules with CSS in Netscape 4.  Lots of luck with that.</li>

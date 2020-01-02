@@ -1,52 +1,43 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 18: Giving your calendar a real caption - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_17_defining_acronyms.html" title="Day 17: Defining acronyms" />
-<link rel="next" href="day_19_using_real_table_headers.html" title="Day 19: Using real table headers" />
-
+  <link rel="prev" href="day_17_defining_acronyms.html" title="Day 17: Defining acronyms" />
+  <link rel="next" href="day_19_using_real_table_headers.html" title="Day 19: Using real table headers" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 18: Giving your calendar a real caption</h2>
 <p class="firstparagraph">"But," I hear you cry, "my calendar already <em>has</em> a caption.  Look right there, it has the month and year right at the top.  In bold, even."</p>
 
 <p>But if you dig into your <acronym title="hypertext markup language">HTML</acronym> source, you'll see that your calendar does not have a <em>real</em> caption.  It most likely has a single <code class="sgmltag">&lt;td&gt;</code> table cell defined to span the entire first row, with a <acronym title="cascading style sheets">CSS</acronym> rule to make it look bold.  This is so much easier with a real <code class="sgmltag">&lt;caption&gt;</code> tag.  It's easier to read in your template, saves a few bytes in your page, looks exactly the same in visual browsers, and is more accessible.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_5_marcus.html">Marcus</a> benefits.  <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> displays the caption with the word "<samp>CAPTION:</samp>" in front of it, making it perfectly clear that this line is the caption and not the column headers or table data.</li>
 <li><a href="day_1_jackie.html">Jackie</a> benefits indirectly.  Using a real <code>&lt;caption&gt;</code> tag clears the way for using real table headers, which benefits Jackie in ways we'll discuss tomorrow.</li>
 </ol>
 
 <h3>How to do it</h3>
-
 <p>You can only do this in publishing tools that support a calendar (which rules out Blogger) and that allow you to customize the <acronym title="hypertext markup language">HTML</acronym> generated for calendars (which rules out Manila).</p>
 
 <p>In Movable Type, you probably have a table for your calendar in your Main Index template that starts like this (searching for "calendarhead" is likely to find it):</p>
@@ -122,7 +113,6 @@
 </ol>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Tony Bowden</cite>: <a href="http://www.tmtm.com/insanity/2002/07/03.html#a180">Changing the Calendar in Radio</a>.</li>
 </ul>

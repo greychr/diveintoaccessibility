@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 26: Using relative font sizes - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_25_using_real_horizontal_rules_or_faking_them_properly.html" title="Day 25: Using real horizontal rules (or faking them properly)" />
-<link rel="next" href="day_27_using_real_headers.html" title="Day 27: Using real headers" />
-
+  <link rel="prev" href="day_25_using_real_horizontal_rules_or_faking_them_properly.html" title="Day 25: Using real horizontal rules (or faking them properly)" />
+  <link rel="next" href="day_27_using_real_headers.html" title="Day 27: Using real headers" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 26: Using relative font sizes</h2>
 <p class="firstparagraph">Web sites, with few exceptions, center around words.  News, opinions, thoughts, ideas, stories, original writing, e-commerce: all words.  Visual design and images are important, to be sure, but if people can't read your words, what's the point?</p>
 
@@ -41,7 +34,6 @@
 <p>Use relative font sizes in browsers that can handle them, and absolute font sizes in Netscape 4, which does not reliably support relative font sizes.  You can do this even if you don't use multiple stylesheets.  In a minute, I'll give copy-and-paste solutions for the default Movable Type template and <em>all</em> default Radio themes.  And a lengthy explanation of the technique itself to help you implement it in other templates.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_4_lillian.html">Lillian</a> benefits.  Lillian has difficulty seeing web pages clearly, due to nothing more than old age.  Like 80% of the Internet population, she uses Internet Explorer for Windows, which does not support resizing text unless the web designer exclusively specifies relative font sizes.  Lillian has changed the default text size in her browser (under the "View" menu, "Text Size"), but it doesn't do any good on sites that use absolute font sizes.  This includes virtually every weblog template in existence.  For example, this is what the default Movable Type template looks like to Lillian:</p>
 
@@ -56,7 +48,6 @@
 </ol>
 
 <h3>How to do it: Radio</h3>
-
 <p>In your Home Page Template, look in your <code>&lt;style&gt;</code> section near the top for a CSS rule that looks like this:</p>
 
 <blockquote>
@@ -91,7 +82,6 @@ html>body p {
 <p>Make sure to include the comments at the beginning and the end.  They're the key to the whole thing, as explained below.</p>
 
 <h3>How to do it: Movable Type</h3>
-
 <p>The default Movable Type template is more complex than the Radio templates, but we're going to do the same thing, just more of it.  In your Stylesheet template (<code>styles-site.css</code>), add this at the end:</p>
 
 <blockquote>
@@ -163,7 +153,6 @@ body .comments-body {
 <p>Again, make sure to include the comments at the beginning and the end.</p>
 
 <h3>How to do it: detailed explanation</h3>
-
 <p>The general idea is that we're going to use font-size keywords.  These are little-used (due to bugs in older browsers), but they have three interesting properties:</p>
 
 <ol>
@@ -218,7 +207,6 @@ html>body p {
 </ol>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Mark Pilgrim</cite>: <a href="examples/fontsize.html">Relative Font Sizing HOWTO</a>.  Gives essentially this same explanation, but the page itself is an example of the technique, so you can see it in action.</li>
 <li><cite title="A List Apart">Todd Fahrner</cite>: <a href="http://www.alistapart.com/stories/sizematters/">Size Matters: Making Font Size Keywords Work</a>.</li>

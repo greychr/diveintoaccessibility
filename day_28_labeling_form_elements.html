@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 28: Labeling form elements - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_27_using_real_headers.html" title="Day 27: Using real headers" />
-<link rel="next" href="day_29_making_everything_searchable.html" title="Day 29: Making everything searchable" />
-
+  <link rel="prev" href="day_27_using_real_headers.html" title="Day 27: Using real headers" />
+  <link rel="next" href="day_29_making_everything_searchable.html" title="Day 29: Making everything searchable" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 28: Labeling form elements</h2>
 <p class="firstparagraph">Has it ever bothered you that web forms are so hard to use?  For instance, in regular <acronym title="graphical user interface">GUI</acronym> applications, you can click anywhere on a checkbox label to check or uncheck the box, but in web-based applications, you can only click on the little checkbox square itself.  This is annoying but not fatal.  But for blind users, the situation is even worse.  Even simple forms, like comment posting forms, can be difficult to use if you can't see them all at once.  (We noted <a href="day_19_using_real_table_headers.html" title="Day 19: Using real table headers">a similar problem with tables</a>; a weblog calendar is easy to use if you can see it all at once, but difficult if you can only see it one day at a time.)</p>
 
@@ -41,7 +34,6 @@
 <p>The <code>&lt;label&gt;</code> tag allows you to associate a form label with any kind of form input element: text box, multi-line text area, checkbox, radio button, whatever.  This allows screen readers to intelligently announce what a particular input element is, by reading the label.  Furthermore, if you use a <code>&lt;label&gt;</code> tag to associate a checkbox (<code>&lt;input type="checkbox"&gt;</code>) with the text next to it, your web-based form will work like a GUI application: clicking anywhere on the text label will toggle the checkbox.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  When Jackie tabs through a form, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> announces the name of each element (by its <code>name</code> property), which may or may not be intelligible.  But if the form element is associated with a label, JAWS will read the label text instead.  "Text: name."  (<kbd>TAB</kbd>)  "Text: email address."  (<kbd>TAB</kbd>)  "Text: URL."  (<kbd>TAB</kbd>)  "Text area: comments."  And so forth.</li>
 <li><a href="day_4_lillian.html">Lillian</a> benefits.  Once form elements are associated with labels, Lillian can click anywhere on the text next to a checkbox, and it will toggle the checkbox.  This gives a much wider margin of error for toggling the checkbox with a mouse, and with her limited vision, the wider the better.</li>
@@ -49,7 +41,6 @@
 </ol>
 
 <h3>How to do it: Movable Type</h3>
-
 <p>In Movable Type, edit your Comment Listing Template.  Near the bottom, you should see a form that contains elements like this:</p>
 
 <blockquote>
@@ -89,7 +80,6 @@ Comments:&lt;br /&gt;<br />
 <p>Be sure to make the same changes to your Comment Preview template, your Comment Error template, and your Individual Entry Archive.</p>
 
 <h3>How to do it: Greymatter</h3>
-
 <p>Under "Edit Karma &amp; Comments-Related Templates", you should see a template called "{{entrycommentsform}} Posting form" that includes this:</p>
 
 <blockquote>
@@ -131,7 +121,6 @@ Comments<br />
 </blockquote>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite title="Web Accessibility In Mind">WebAIM</cite>: <a href="http://www.webaim.org/howto/forms">How to Create Accessible Forms</a>.  For more complex forms, additional accessibility-related tags like <code>&lt;legend&gt;</code> and <code>&lt;fieldset&gt;</code> may be required.  This tutorial shows you what they are and how to use them.</li>
 <li><cite title="World Wide Web Consortium">W3C</cite>: <a href="http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.9.1">Forms in HTML Documents: The LABEL element</a>.</li>

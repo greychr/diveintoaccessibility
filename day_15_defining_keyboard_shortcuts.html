@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 15: Defining keyboard shortcuts - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_14_adding_titles_to_links.html" title="Day 14: Adding titles to links" />
-<link rel="next" href="day_16_not_opening_new_windows.html" title="Day 16: Not opening new windows" />
-
+  <link rel="prev" href="day_14_adding_titles_to_links.html" title="Day 14: Adding titles to links" />
+  <link rel="next" href="day_16_not_opening_new_windows.html" title="Day 16: Not opening new windows" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 15: Defining keyboard shortcuts</h2>
 <p class="firstparagraph">One of the least known features of <acronym title="hypertext markup language">HTML</acronym> is the <code>accesskey</code> attribute for links and forms, which allows the web designer to define keyboard shortcuts for frequently-used links or form fields.  On Windows, you can press ALT + an access key; on Macintosh, you can press Control + an access key.  If the access key is defined on a link, your browser will follow the link; if defined on a form field, your browser will set focus on that field.  Internet Explorer has supported access keys since version 4, Netscape since version 6.  Older browsers simply ignore them, with no harmful effect.</p>
 
@@ -48,14 +41,12 @@
 </dl>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  When <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> reads a link that defines an <code>accesskey</code>, it announces the access key as well.  For example, the link <code class="sgmltag">&lt;a href="/" accesskey="1"&gt;Home page&lt;/a&gt;</code> would be read by JAWS as "link: Home page, ALT + 1".  Jackie can focus on the link by pressing <kbd>ALT+1</kbd>, then follow it by pressing <kbd>ENTER</kbd>.</li>
 <li><a href="day_3_bill.html">Bill</a> benefits.  Since Bill can not use a mouse effectively since his stroke, he relies on keyboard navigation and keyboard shortcuts to move around the page.  Access keys are an excellent way for him to jump to common or frequently-used links.  Bill can type <kbd>ALT+1</kbd>, and <a href="http://www.mozilla.org/">Mozilla</a> immediately follows the link that defines <code>accesskey="1"</code>.  (Note: Mozilla does not announce access keys, which raises the question of how Bill would discover what they are.  We will discuss this in a future tip.)</li>
 </ol>
 
 <h3>How to do it: home page link</h3>
-
 <ul>
 <li><p><strong>Movable Type</strong>: The default template does not have a link to the home page, so you should make your site name into a link, and give it an <code>accesskey</code>.  Search your template for <code>&lt;$MTBlogName$&gt;</code>, and change it to this:</p>
 
@@ -86,7 +77,6 @@
 </ul>
 
 <h3>How to do it: skip navigation link</h3>
-
 <p>Do you have a <a title="Day 11: Skipping over navigation links" href="day_11_skipping_over_navigation_links.html">link to skip over your navigation bar</a>?  If so, give it an <code>accesskey="2"</code>.</p>
 
 <blockquote>
@@ -94,7 +84,6 @@
 </blockquote>
 
 <h3>How to do it: feedback link</h3>
-
 <p>Do you have a link to a feeback form, or a link to your email address?  If so, give it an <code>accesskey="9"</code>.</p>
 
 <blockquote>
@@ -106,7 +95,6 @@
 <p>Be sure to include each <code>accesskey</code> on each page of your web site; make these changes to all your relevant templates.</p>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Jukka Korpela</cite>: <a href="http://www.cs.tut.fi/~jkorpela/forms/accesskey.html">Improving accessibility with <code>accesskey</code> in <acronym title="hypertext markup language">HTML</acronym> forms and links</a>.  Explains why all my suggested <code>accesskey</code> codes are numbers, instead of letters.</li>
 <li><cite>Paul Bohman</cite>: <a href="http://www.webaim.org/discussion/mail_message.php?id=800">Access keys, <acronym title="Internet Explorer">IE</acronym>6</a>.  Part of a discussion of <code>accesskey</code> on the <a href="http://www.webaim.org/discussion/">Web Accessibility Forum Mailing List</a>.</li>

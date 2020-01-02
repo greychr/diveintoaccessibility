@@ -1,43 +1,35 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 21: Ignoring spacer images - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_20_providing_a_summary_for_tables.html" title="Day 20: Providing a summary for tables" />
-<link rel="next" href="day_22_using_real_lists_or_faking_them_properly.html" title="Day 22: Using real lists (or faking them properly)" />
-
+  <link rel="prev" href="day_20_providing_a_summary_for_tables.html" title="Day 20: Providing a summary for tables" />
+  <link rel="next" href="day_22_using_real_lists_or_faking_them_properly.html" title="Day 22: Using real lists (or faking them properly)" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 21: Ignoring spacer images</h2>
 <p class="firstparagraph">Many designers use transparent spacer images to control the layout of their web site in visual browsers.  You may use as many as you like, but you need to explicitly specify an empty <code>alt</code> attribute on each spacer image so that non-visual browsers know to ignore them.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_5_marcus.html">Marcus</a> benefits.  By default, <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> displays the filename of any image that does not contain an <code>alt</code> attribute.  Many popular weblog templates include several spacer images even before the site name.  You don't notice them in your visual browser, of course, but this is what Marcus sees:</p>
 <blockquote>
@@ -59,7 +51,6 @@ Welcome To My Web Site
 </ol>
 
 <h3>How to do it</h3>
-
 <p>Radio users can take the day off.  As of last Monday, Radio automatically generates empty <code>alt</code> attributes for all spacer images.  (Thanks, <a href="http://radio.weblogs.com/0001000/" title="Jake's Radio Blog">Jake</a>.)  If you view source on your home page and you're not seeing <code>alt=""</code> on any of your spacer images, update Radio.root and republish your site.</p>
 
 <p>Users of other publishing tools should look through your template for <code>&lt;img&gt;</code> tags with filenames like "<code class="filename">spacer.gif</code>", "<code class="filename">shim.gif</code>", "<code class="filename">1.gif</code>", or any image that appears to be repeated several times within your template, possibly with different <code>width</code> and <code>height</code> attributes each time.</p>
@@ -79,7 +70,6 @@ Welcome To My Web Site
 <p>If you re-use the same spacer image multiple times, it's probably easiest to do this with global search-and-replace.</p>
 
 <h3>Things not to do</h3>
-
 <ol>
 <li><p>Don't define <code>alt=" "</code>.  The <code>alt</code> attribute should be an empty string, not a space.</p></li>
 <li><p>Don't specify an <code>alt</code> attribute on your <code>&lt;body&gt;</code> tag, even if it defines a background image.  This background image is always ignored by non-visual browsers.  It looks like this:</p>
@@ -95,7 +85,6 @@ Welcome To My Web Site
 </ol>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite><acronym title="Web Accessibility in Mind">WebAIM</acronym></cite>: <a href="http://www.webaim.org/howto/accessiblegraphics3">How to Create Accessible Graphics</a>.</li>
 </ul>

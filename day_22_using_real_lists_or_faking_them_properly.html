@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 22: Using real lists (or faking them properly) - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_21_ignoring_spacer_images.html" title="Day 21: Ignoring spacer images" />
-<link rel="next" href="day_23_providing_text_equivalents_for_images.html" title="Day 23: Providing text equivalents for images" />
-
+  <link rel="prev" href="day_21_ignoring_spacer_images.html" title="Day 21: Ignoring spacer images" />
+  <link rel="next" href="day_23_providing_text_equivalents_for_images.html" title="Day 23: Providing text equivalents for images" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 22: Using real lists (or faking them properly)</h2>
 <p class="firstparagraph">Suppose you have a blogroll of three links: Slashdot, The Register, and dive into mark.  Instead of a boring black bullet, you want a fancy-looking image next to each one.  How do you do it?  The most common solution is to use <code class="sgmltag">&lt;img&gt;</code> tags next to each link.  This works, and can easily be made more accessible with the addition of proper <code>alt</code> text on each image.</p>
 
@@ -41,7 +34,6 @@
 <p>I'll give examples of both techniques in a minute.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_5_marcus.html">Marcus</a> benefits.  <a href="day_21_ignoring_spacer_images.html" title="Day 21: Ignoring spacer images">As we saw yesterday</a>, <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> displays the filename of any image without an <code>alt</code> attribute.</p></li>
 <li><p><a href="day_2_michael.html">Michael</a> benefits.  <a href="http://links.sourceforge.net/">Links</a> never displays images, but by default it does <em>not</em> display anything for images with no <code>alt</code> text.  This was acceptable yesterday when we wanted to <a href="day_21_ignoring_spacer_images.html" title="Day 21: Ignoring spacer images">ignore spacer images</a>, but today we want to make sure that there is some indication that this is a list, so we need that <code>alt</code> text.</p>
@@ -62,7 +54,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>If you have a blogroll that looks like this:</p>
 
 <blockquote>
@@ -80,7 +71,6 @@
 </blockquote>
 
 <h3>How to do it: advanced</h3>
-
 <p>The advanced (and preferred) technique uses <acronym title="cascading style sheets">CSS</acronym> to define the image to use as a list bullet.</p>
 
 <blockquote>
@@ -110,7 +100,6 @@ ul.blogroll {<br />
 </ul>
 
 <h3>Postscript: un-bulleted lists</h3>
-
 <p>Another common way to create a list of links is with no images whatsoever, just a heap of links, possibly right-aligned, like this:</p>
 
 <blockquote>
@@ -156,7 +145,6 @@ ul.blogroll {<br />
 <p>The "<code>list-style: none</code>" line suppresses the usual black bullet in visual browsers.  This works in all browsers, even Netscape 4.  Thanks to <a href="http://www.royal-ts.de/">Tobias Schmidt</a> for reminding me of this technique.</p>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Tobias Schmidt</cite>: <a href="http://www.royal-ts.de/mtarchives/000805.php">Styling lists with CSS</a>.</li>
 <li><cite>W3Schools</cite>: <a href="http://www.w3schools.com/css/css_list.asp">CSS List Properties</a>.</li>

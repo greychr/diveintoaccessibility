@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 29: Making everything searchable - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_28_labeling_form_elements.html" title="Day 28: Labeling form elements" />
-<link rel="next" href="day_30_creating_an_accessibility_statement.html" title="Day 30: Creating an accessibility statement" />
-
+  <link rel="prev" href="day_28_labeling_form_elements.html" title="Day 28: Labeling form elements" />
+  <link rel="next" href="day_30_creating_an_accessibility_statement.html" title="Day 30: Creating an accessibility statement" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 29: Making everything searchable</h2>
 <p class="firstparagraph">Every web site needs a site search.  Period.</p>
 
@@ -46,11 +39,9 @@
 </ol>
 
 <h3>Who benefits?</h3>
-
 <p><a href="day_1_jackie.html">Jackie</a>, <a href="day_2_michael.html">Michael</a>, <a href="day_3_bill.html">Bill</a>, <a href="day_4_lillian.html">Lillian</a>, <a href="day_5_marcus.html">Marcus</a>, and pretty much everyone else in the world benefit from a well-implemented site search.  Especially on a weblog or news-oriented site, where content is primarily organized chronologically, it's very frustrating to try to find a specific post that's scrolled off the main page.  Very few people know about the "site:domainname.com" syntax on Google (to restrict search results to a particular domain), and Google only reindexes once a month anyway.  Provide your own site search.</p>
 
 <h3>How to do it</h3>
-
 <p>Greymatter has built-in search functionality, but you will need to customize the template slightly to provide an <code>accesskey</code> for the search box.  Go to "Edit Templates", "Miscellaneous Templates", "Search Form Template", and find a form like this:</p>
 
 <blockquote>
@@ -89,7 +80,6 @@
 <p>Note: you can't cut and paste this onto your own weblog.  If you want to use Google Free Web Search, you'll need to sign up and get your own code that goes into that hidden <code>cof</code> field.</p>
 
 <h3>Further reading</h3>
-
 <ul>
 <li><cite>Jay Allen</cite>: <a href="http://www.jayallen.org/mt-search/">MT-Search</a>, a search plug-in for Movable Type.</li>
 <li><cite>Phil Ringnalda</cite>: <a href="http://philringnalda.com/archives/002257.php">mt-search.cgi and MySQL</a>.  Important information getting MT-Search to work with Movable Type 2.2 and MySQL.</li>

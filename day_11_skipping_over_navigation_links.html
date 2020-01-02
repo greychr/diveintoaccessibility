@@ -1,52 +1,43 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 11: Skipping over navigation links - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_10_presenting_your_main_content_first.html" title="Day 10: Presenting your main content first" />
-<link rel="next" href="day_12_using_color_safely.html" title="Day 12: Using color safely" />
-
+  <link rel="prev" href="day_10_presenting_your_main_content_first.html" title="Day 10: Presenting your main content first" />
+  <link rel="next" href="day_12_using_color_safely.html" title="Day 12: Using color safely" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 11: Skipping over navigation links</h2>
 <p class="firstparagraph">If you didn't manage to hack your templates to <a title="Day 10: Presenting your main content first" href="day_10_presenting_your_main_content_first.html">present your main content first</a>, here's a compromise: provide an link to skip over your navigation links.  It's not a perfect solution (presenting your main content first is better), but it's an accepted compromise that many sites use.</p>
 
 <p>This "skip link" is just a regular <code class="sgmltag">&lt;a&gt;</code> tag, like any other link, but we'll use <acronym title="cascading style sheets">CSS</acronym> to hide it from visual browsers like Internet Explorer and Netscape.  It won't affect your page layout at all; it will be completely invisible.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_5_marcus.html">Marcus</a> benefits.  When he visits your page, <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> will display the link and allow him to skip over your navigation bar and go straight to your main content.  See <a href="day_10_presenting_your_main_content_first.html">Day 10: Presenting your main content first</a> for an example of why this is so important.</li>
 <li><a href="day_1_jackie.html">Jackie</a> benefits.  When she visits your page, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> will read the skip link and allow her to skip over your navigation bar and go straight to your main content.</li>
 </ol>
 
 <h3>How to do it</h3>
-
 <p>First, use <a href="http://www.delorie.com/web/lynxview.html">Lynx Viewer</a> on your own home page to determine whether your navigation bar is presented before your main content.  If your main content comes first, this tip does not apply to you; enjoy your day off.</p>
 
 <p>Now define a <acronym title="cascading style sheets">CSS</acronym> rule for the skip links, to make them invisible to visual browsers.  If you have an external stylesheet, put this rule at the end of it.  (If you have multiple external stylesheets, put this rule in the Netscape 4-friendly one.)  If you just have a <code class="sgmltag">&lt;style&gt;</code> section at the top of your template, add this rule immediately after the <code class="sgmltag">&lt;style&gt;</code> tag.</p>

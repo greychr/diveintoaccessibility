@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 17: Defining acronyms - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_16_not_opening_new_windows.html" title="Day 16: Not opening new windows" />
-<link rel="next" href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption" />
-
+  <link rel="prev" href="day_16_not_opening_new_windows.html" title="Day 16: Not opening new windows" />
+  <link rel="next" href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 17: Defining acronyms</h2>
 <p class="firstparagraph">I used 50 acronyms and abbreviations on my own weblog last month: <acronym title="Americans With Disabilities Act">ADA</acronym>,
 <acronym title="alternate">ALT</acronym>,
@@ -91,7 +84,6 @@
 <p>You should define an acronym whenever you use it, or at least once per post.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><a href="day_2_michael.html">Michael</a> benefits.  When Michael hovers his cursor over an acronym, <a href="http://www.opera.com/">Opera</a> displays the acronym title as a tooltip.</li>
 <li><a href="day_3_bill.html">Bill</a> benefits.  <a href="http://www.mozilla.org/">Mozilla</a> goes even further, automatically rendering acronyms with a dotted underline.  When Bill hovers his cursor over the acronym, Mozilla changes the cursor to a cursor + question mark, and then displays the acronym title as a tooltip.  (You can override this default behavior with cascading style sheets, or use <acronym title="cascading style sheets">CSS</acronym> to get a similar effect in other browsers.)</li>
@@ -100,7 +92,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>The first time you use an acronym, mark it up with an <code class="sgmltag">&lt;acronym&gt;</code> tag, like this:</p>
 
 <blockquote>
@@ -118,7 +109,6 @@
 <p>Then, in your post, simply type "CSS" (with the quotes), and Radio will render it with the acronym tag and the title, just as you defined it.</p>
 
 <h3>How to do it: cascading style sheets</h3>
-
 <p>As an added bonus, you can change the look of all your acronyms using cascading style sheets.  This works in all tools, not just Radio.  Here is the rule I use to produce the dotted underline in all browsers (not just Mozilla):</p>
 
 <blockquote>
@@ -136,7 +126,6 @@
 </blockquote>
 
 <h3>Further reading</h3>
-
 <p>Have you been using acronyms without knowing what they mean?  Look them up.</p>
 
 <ul>
@@ -146,7 +135,6 @@
 </ul>
 
 <h3>Postscript</h3>
-
 <p>Several fellow markup-obsessed gurus have correctly pointed out that there is an <code class="sgmltag">&lt;abbr&gt;</code> tag for abbreviations.  Unfortunately, no version of Internet Explorer for Windows supports it; no tooltips show up at all.  Use <code class="sgmltag">&lt;acronym&gt;</code>.</p>
 
 

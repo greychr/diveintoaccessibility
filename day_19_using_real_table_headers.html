@@ -1,38 +1,31 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
   <meta charset="utf-8">
   <title>Day 19: Using real table headers - Dive Into Accessibility</title>
-<link rel="start" title="Home page" href="index.html" />
-<link rel="contents" title="Table of contents" href="table_of_contents.html" />
-<link rel="search" title="Search this site" href="mt/mt-search.html" />
-<link rel="help" title="Access features of this site" href="accessibility_statement.html" />
-<link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
-<link rel="copyright" title="Terms of use" href="terms_of_use.html" />
-<link rel="up" title="Table of contents" href="table_of_contents.html" />
-<link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
-<link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
+  <link rel="start" title="Home page" href="index.html" />
+  <link rel="contents" title="Table of contents" href="table_of_contents.html" />
+  <link rel="search" title="Search this site" href="mt/mt-search.html" />
+  <link rel="help" title="Access features of this site" href="accessibility_statement.html" />
+  <link rel="author" title="Send feedback to the author" href="mailto:feedback@diveintoaccessibility.org" />
+  <link rel="copyright" title="Terms of use" href="terms_of_use.html" />
+  <link rel="up" title="Table of contents" href="table_of_contents.html" />
+  <link rel="first" title="Day 1: Jackie" href="day_1_jackie.html" />
+  <link rel="last" title="Accessibility statement" href="accessibility_statement.html" />
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-
-<link rel="prev" href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption" />
-<link rel="next" href="day_20_providing_a_summary_for_tables.html" title="Day 20: Providing a summary for tables" />
-
+  <link rel="prev" href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption" />
+  <link rel="next" href="day_20_providing_a_summary_for_tables.html" title="Day 20: Providing a summary for tables" />
 </head>
 <body class="container">
   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
-<header id="logo">
-<h1 class="title">
-<a href="index.html" accesskey="1">Dive Into Accessibility</a>
-</h1>
-<p class="lead">30 days to a more accessible web site</p>
-</header>
+  <header id="logo">
+    <h1 class="title"><a href="index.html" accesskey="1">Dive Into Accessibility</a></h1>
+    <p class="lead">30 days to a more accessible web site</p>
+  </header>
 
-<main id="main">
+  <main id="main">
 <h2>Day 19: Using real table headers</h2>
 <p class="firstparagraph">If you have a calendar on your web site, it should be rendered as an <acronym title="hypertext markup language">HTML</acronym> table.  There have been a few attempts to create pure-<acronym title="cascading style sheets">CSS</acronym> calendars.  This is misguided; calendars are data tables, and should be marked up as such.</p>
 
@@ -45,7 +38,6 @@
 <p>Note I said <em>proper</em> headers.  Putting the days of the week in <code class="sgmltag">&lt;td&gt;</code> tags in the first row is not enough.  They need to be <code class="sgmltag">&lt;th&gt;</code> tags instead.  Most weblog templates get this wrong, but it's simple enough to fix, and your calendar will look exactly the same in visual browsers once you're done.</p>
 
 <h3>Who benefits?</h3>
-
 <ol>
 <li><p><a href="day_1_jackie.html">Jackie</a> benefits.  When she encounters your calendar, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> first <a href="day_18_giving_your_calendar_a_real_caption.html">reads the caption</a>, then announces the headers, then Jackie can hold down <kbd>Control</kbd> + <kbd>ALT</kbd> and move through the table with the arrow keys.  As she moves, JAWS announces the header (day of the week) and the cell data (day of the month).</p>
 <p>All major screen readers allow this kind of table navigation.  <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> allows users to switch to "Table Navigation" mode (<kbd>ALT+T</kbd>), then move through the calendar without holding down additional modifier keys.  Home Page Reader actually goes one step beyond JAWS.  As we'll see in a minute, you can define a shorter (or longer) title for each table header (sort of like <a href="day_14_adding_titles_to_links.html" title="Day 14: Adding titles to links">adding a title to a link</a>), and Home Page Reader will read that instead of the original table header text.  This means you can visually display your days of the week as "Sun", "Mon", "Tue", but you can tell Home Page Reader to read them as "Sunday", "Monday", "Tuesday".  Cool.</p>
@@ -53,7 +45,6 @@
 </ol>
 
 <h3>How to do it</h3>
-
 <p>If you didn't do it already, make sure your calendar <a href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption">has a real caption</a>.  The <code>&lt;caption&gt;</code> tag must be the first thing after the <code>&lt;table&gt;</code> tag, and the row of <code>&lt;th&gt;</code> tags should be the first thing after that.</p>
 
 <p>In Movable Type, find the calendar in your Main Index Template.  (Again, searching for "calendarhead" will probably find it.)  Immediately after the <code>&lt;caption&gt;</code>, you'll see the days of the week defined like this:</p>
@@ -124,11 +115,9 @@
 </ol>
 
 <h3>Very important note about layout tables</h3>
-
 <p>Tables used exclusively for visual layout have a completely different set of rules.  Do <em>not</em> use <code class="sgmltag">&lt;th&gt;</code> tags on layout tables.  Aside from tweaking your tables to <a href="day_10_presenting_your_main_content_first.html" title="Day 10: Presenting your main content first">present your main content first</a>, there's very little you need to do to make layout tables accessible.  We'll discuss one small thing tomorrow.</p>
 
 <h3>Further reading</h3>
-
 <p>If you need to mark up data tables more complex than a calendar (like tables with multiple levels of headers and subheaders), you're on your own.  Here are some starting points:</p>
 
 <ul>
