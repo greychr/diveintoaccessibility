@@ -25,49 +25,54 @@
     <p class="lead">30 days to a more accessible web site</p>
   </header>
 
+  <nav id="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Day 30: Creating an accessibility statement</li>
+    </ol>
+  </nav>
+
   <main id="main">
-<h2>Day 30: Creating an accessibility statement</h2>
-<p class="firstparagraph">If you've implemented any of the tips in this series, create an accessibility statement that lists the accessibility features of your site.</p>
+    <h2>Day 30: Creating an accessibility statement</h2>
+    <p class="firstparagraph">If you've implemented any of the tips in this series, create an accessibility statement that lists the accessibility features of your site.</p>
 
-<h3>Who benefits?</h3>
-<ol>
-<li><a href="day_3_bill.html">Bill</a> benefits.  He makes extensive use of the keyboard for navigation, and he would use your <a href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts"><code>accesskey</code> keyboard shortcuts</a> if he knew what they were.  Unfortunately, Mozilla does not announce them or make them visible in any way, so you'll need to list them yourself.</li>
-<li>Many other users benefit, by learning how to use their own software better.  For instance, <a href="day_4_lillian.html">Lillian</a> did not know that she could set her default text size in her browser until someone told her how to do it; now she can more easily read your site (that is, if you <a href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes">use relative font sizes</a>).  Netscape and Mozilla users may not know that they can turn on the Site Navigation Bar to take advantage of your <a href="day_9_providing_additional_navigation_aids.html" title="Day 9: Providing additional navigation aids">LINK-based navigation aids</a>.  ("View" menu, "Show/hide", "Site Navigation Bar", "Show Only AS Needed".  Unfortunately, this feature was pulled from Mozilla 1.0 final at the last minute, but it's back in 1.1.)</li>
-<li>Fellow web designers benefit, by learning more about accessibility and seeing that you've taken the time to implement these tips.</li>
-</ol>
+    <h3>Who benefits?</h3>
+    <ol>
+      <li><a href="day_3_bill.html">Bill</a> benefits.  He makes extensive use of the keyboard for navigation, and he would use your <a href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts"><code>accesskey</code> keyboard shortcuts</a> if he knew what they were.  Unfortunately, Mozilla does not announce them or make them visible in any way, so you'll need to list them yourself.</li>
+      <li>Many other users benefit, by learning how to use their own software better.  For instance, <a href="day_4_lillian.html">Lillian</a> did not know that she could set her default text size in her browser until someone told her how to do it; now she can more easily read your site (that is, if you <a href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes">use relative font sizes</a>).  Netscape and Mozilla users may not know that they can turn on the Site Navigation Bar to take advantage of your <a href="day_9_providing_additional_navigation_aids.html" title="Day 9: Providing additional navigation aids">LINK-based navigation aids</a>.  ("View" menu, "Show/hide", "Site Navigation Bar", "Show Only AS Needed".  Unfortunately, this feature was pulled from Mozilla 1.0 final at the last minute, but it's back in 1.1.)</li>
+      <li>Fellow web designers benefit, by learning more about accessibility and seeing that you've taken the time to implement these tips.</li>
+    </ol>
 
-<h3>How to do it</h3>
-<p>In Radio or Manila, you can create your accessibility statement as a story ("Stories" in the Radio or Manila toolbar) so it has its own URL.  Otherwise, just create a new post.  Make a note of the URL after saving; you'll need it later.</p>
+    <h3>How to do it</h3>
+    <p>In Radio or Manila, you can create your accessibility statement as a story ("Stories" in the Radio or Manila toolbar) so it has its own URL.  Otherwise, just create a new post.  Make a note of the URL after saving; you'll need it later.</p>
 
-<p>The first thing you should do is list the <a href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts"><code>accesskey</code> keyboard shortcuts</a> you've defined, since most browsers do not announce them or make them visible in any way.  Also list the <code>accesskey</code> for your accessibility statement itself (which will be <code>accesskey="0"</code>, as we'll see in a minute).</p>
+    <p>The first thing you should do is list the <a href="day_15_defining_keyboard_shortcuts.html" title="Day 15: Defining keyboard shortcuts"><code>accesskey</code> keyboard shortcuts</a> you've defined, since most browsers do not announce them or make them visible in any way.  Also list the <code>accesskey</code> for your accessibility statement itself (which will be <code>accesskey="0"</code>, as we'll see in a minute).</p>
 
-<p>After that, you should list all of the accessibility features that you've implemented throughout this series.  If you implemented some tips but not others, just mention the ones you actually implemented.  This will likely be an enlightening experience, like updating your r&eacute;sum&eacute; for the first time since taking a new job and realizing just how much stuff you've actually done.  You've done a lot.</p>
+    <p>After that, you should list all of the accessibility features that you've implemented throughout this series.  If you implemented some tips but not others, just mention the ones you actually implemented.  This will likely be an enlightening experience, like updating your r&eacute;sum&eacute; for the first time since taking a new job and realizing just how much stuff you've actually done.  You've done a lot.</p>
 
-<p>If you like, you can also mention briefly why you implemented each feature ("easier to use with screen readers", "for users of text-only browsers", "for users who can not distinguish colors", and so forth).  Remember, an accessibility statement will be read by more than disabled users; it should be both informative (for users who directly benefit) and educative (for fellow web designers who choose to follow your example).  Or, instead of explaining them yourself, you can link to individual days in this book, or just <a href="index.html" title="Dive Into Accessibility: 30 days to a more accessible web site">link to the book's home page</a>.</p>
+    <p>If you like, you can also mention briefly why you implemented each feature ("easier to use with screen readers", "for users of text-only browsers", "for users who can not distinguish colors", and so forth).  Remember, an accessibility statement will be read by more than disabled users; it should be both informative (for users who directly benefit) and educative (for fellow web designers who choose to follow your example).  Or, instead of explaining them yourself, you can link to individual days in this book, or just <a href="index.html" title="Dive Into Accessibility: 30 days to a more accessible web site">link to the book's home page</a>.</p>
 
-<p>Finally, link to your accessibility statement from every page of your site, either in your site-wide navigation bar or in your page footer.  Give the link a title and an <code>accesskey="0"</code>, like this:</p>
+    <p>Finally, link to your accessibility statement from every page of your site, either in your site-wide navigation bar or in your page footer.  Give the link a title and an <code>accesskey="0"</code>, like this:</p>
 
-<blockquote>
-<p><code>&lt;a href="/accessibility_statement.html" title="accessibility features of this site" accesskey="0"&gt;Accessibility statement&lt;/a&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code>&lt;a href="/accessibility_statement.html" title="accessibility features of this site" accesskey="0"&gt;Accessibility statement&lt;/a&gt;</code></p>
+    </blockquote>
 
-<h3>Further reading</h3>
-<ul>
-<li><a href="http://diveintomark.org/accessibility_statement.html">Accessibility statement for diveintomark.org</a>.</li>
-<li><a href="accessibility_statement.html">Accessibility statement for diveintoaccessibility.org</a>.  Feel free to use either of these as a template, including structure, wording, and links to further reading.</li>
-</ul>
+    <h3>Further reading</h3>
+    <ul>
+      <li><a href="http://diveintomark.org/accessibility_statement.html">Accessibility statement for diveintomark.org</a>.</li>
+      <li><a href="accessibility_statement.html">Accessibility statement for diveintoaccessibility.org</a>.  Feel free to use either of these as a template, including structure, wording, and links to further reading.</li>
+    </ul>
 
-<p></p>
-
-
-<nav aria-label="page navigation">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="day_29_making_everything_searchable.html"><span aria-hidden="true">&laquo;</span> Day 29: Making everything searchable</a></li>
-    <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
-    <li class="page-item"><a class="page-link" href="conclusion.html">Conclusion <span aria-hidden="true">&raquo;</span></a></li>
-  </ul>
-</nav>
-</main>
+    <nav aria-label="page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="day_29_making_everything_searchable.html"><span aria-hidden="true">&laquo;</span> Day 29: Making everything searchable</a></li>
+        <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
+        <li class="page-item"><a class="page-link" href="conclusion.html">Conclusion <span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </main>
 
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
@@ -107,14 +112,6 @@
 
 
 </div> <!--menu-->
-
-<nav id="navigation" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Day 30: Creating an accessibility statement</li>
-  </ol>
-</nav>
 
 </body>
 </html>

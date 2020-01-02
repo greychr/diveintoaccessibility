@@ -25,66 +25,71 @@
     <p class="lead">30 days to a more accessible web site</p>
   </header>
 
+  <nav id="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Day 12: Using color safely</li>
+    </ol>
+  </nav>
+
   <main id="main">
-<h2>Day 12: Using color safely</h2>
-<p class="firstparagraph">This tip is a general rule that applies to many areas of web design, but I will focus on a specific example that is common among weblogs: link text.</p>
+    <h2>Day 12: Using color safely</h2>
+    <p class="firstparagraph">This tip is a general rule that applies to many areas of web design, but I will focus on a specific example that is common among weblogs: link text.</p>
 
-<p>There are two potential problems related to color.  First, your link text may not contrast sufficiently with your background color.  Any very light color on a white background is trouble; the link text may simply disappear into the background.  Similarly, a dark color on a black background is trouble.  This actually applies to all text, not just links, but it's fairly common on weblogs for text to be readable and links to be made unintentionally unreadable, which is why I mention links in particular.</p>
+    <p>There are two potential problems related to color.  First, your link text may not contrast sufficiently with your background color.  Any very light color on a white background is trouble; the link text may simply disappear into the background.  Similarly, a dark color on a black background is trouble.  This actually applies to all text, not just links, but it's fairly common on weblogs for text to be readable and links to be made unintentionally unreadable, which is why I mention links in particular.</p>
 
-<p>The second potential problem is the link decoration.  If your <acronym title="cascading style sheet">CSS</acronym> redefines a rule to make your links a different color, you need to make sure that the links are also distinguishable in some other way, like bold, italic, or underline.  Otherwise, the link text might be perfectly readable, but colorblind people won't be able to tell that it's a link.  This is illustrated below.</p>
+    <p>The second potential problem is the link decoration.  If your <acronym title="cascading style sheet">CSS</acronym> redefines a rule to make your links a different color, you need to make sure that the links are also distinguishable in some other way, like bold, italic, or underline.  Otherwise, the link text might be perfectly readable, but colorblind people won't be able to tell that it's a link.  This is illustrated below.</p>
 
-<h3>Who benefits?</h3>
-<ol>
-<li><p><a href="day_2_michael.html">Michael</a> benefits.  Here is a sample screenshot of three different decoration schemes for links.</p>
-<p><img alt="Picture of three links using various color schemes, description follows" src="images/linkcolor.gif" width="325" height="90" /></p>
-<p>As shown, the link in the first sentence uses the default scheme, and displays blue/purple and underlined in visual browsers.  The second link has two forms of text decoration applied, and displays bold and red (but not underlined).  The third link has only one form of text decoration applied, and displays only as red.</p>
-<p>Now here are the same three links, as Michael sees them.</p>
-<p><img alt="Picture of same three links as Michael sees them, description follows" src="images/linkcolorblind.gif" width="325" height="90" /></p>
-<p>As shown, the first link is still visible; Michael's colorblindness is not affected by the color blue.  In the second sentence, the redness of the link fades, almost to black, but the link still appears bold, so Michael can still distinguish it.  The problem occurs in the third link, which was previously only distinguished by its redness; now that the redness has faded to black, it is virtually impossible to tell which word is a link and which words are normal text.</p>
+    <h3>Who benefits?</h3>
+    <ol>
+    <li><p><a href="day_2_michael.html">Michael</a> benefits.  Here is a sample screenshot of three different decoration schemes for links.</p>
+    <p><img alt="Picture of three links using various color schemes, description follows" src="images/linkcolor.gif" width="325" height="90" /></p>
+    <p>As shown, the link in the first sentence uses the default scheme, and displays blue/purple and underlined in visual browsers.  The second link has two forms of text decoration applied, and displays bold and red (but not underlined).  The third link has only one form of text decoration applied, and displays only as red.</p>
+    <p>Now here are the same three links, as Michael sees them.</p>
+    <p><img alt="Picture of same three links as Michael sees them, description follows" src="images/linkcolorblind.gif" width="325" height="90" /></p>
+    <p>As shown, the first link is still visible; Michael's colorblindness is not affected by the color blue.  In the second sentence, the redness of the link fades, almost to black, but the link still appears bold, so Michael can still distinguish it.  The problem occurs in the third link, which was previously only distinguished by its redness; now that the redness has faded to black, it is virtually impossible to tell which word is a link and which words are normal text.</p>
 
-</li>
-</ol>
+    </li>
+    </ol>
 
-<h3>How to do it</h3>
-<p>To check for "sufficient contrast" between your text color and background color, use <a href="http://www.vischeck.com/vischeck/">VisCheck</a> to simulate what your web page looks like to a colorblind reader.</p>
+    <h3>How to do it</h3>
+    <p>To check for "sufficient contrast" between your text color and background color, use <a href="http://www.vischeck.com/vischeck/">VisCheck</a> to simulate what your web page looks like to a colorblind reader.</p>
 
-<p>To check for link decoration problems, look at your <acronym title="cascading style sheets">CSS</acronym> rules for "<code>a</code>" tags.  For example, if you have a rule like this in your <acronym title="cascading style sheets">CSS</acronym>, then your links are <em>only</em> distinguished by their redness, which is no good:</p>
+    <p>To check for link decoration problems, look at your <acronym title="cascading style sheets">CSS</acronym> rules for "<code>a</code>" tags.  For example, if you have a rule like this in your <acronym title="cascading style sheets">CSS</acronym>, then your links are <em>only</em> distinguished by their redness, which is no good:</p>
 
-<blockquote>
-<pre><code>a {
-  text-decoration: none;
-  color: red;
-}</code></pre>
-</blockquote>
+    <blockquote>
+    <pre><code>a {
+      text-decoration: none;
+      color: red;
+    }</code></pre>
+    </blockquote>
 
-<p>You can keep your links red, but you need to make sure that the links are <em>also</em> bold, or underlined, or italicized.  To make them bold as well as red, add one line:</p>
+    <p>You can keep your links red, but you need to make sure that the links are <em>also</em> bold, or underlined, or italicized.  To make them bold as well as red, add one line:</p>
 
-<blockquote>
-<pre><code>a {
-  text-decoration: none;
-  color: red;
-  font-weight: bold; /* add this line */
-}</code></pre>
-</blockquote>
+    <blockquote>
+    <pre><code>a {
+      text-decoration: none;
+      color: red;
+      font-weight: bold; /* add this line */
+    }</code></pre>
+    </blockquote>
 
-<h3>Further reading</h3>
-<ul>
-<li><a href="http://www.vischeck.com/vischeck/">VisCheck</a> simulates colorblindness and allows you to see what colorblind people see.  You can check a single image or an entire web page.</li>
-<li><cite>Cal Henderson</cite>: <a href="http://www.iamcal.com/toys/colors/">Color Vision</a>.  Shows the color spectrum as seen by people with various types of colorblindness.</li>
-<li><a href="http://www.toledo-bend.com/colorblind/Ishihara.html">Ishihara Test for Color Blindness</a> contains a series of images that people with red-green colorblindness see differently, or don't see at all.</li>
-</ul>
+    <h3>Further reading</h3>
+    <ul>
+    <li><a href="http://www.vischeck.com/vischeck/">VisCheck</a> simulates colorblindness and allows you to see what colorblind people see.  You can check a single image or an entire web page.</li>
+    <li><cite>Cal Henderson</cite>: <a href="http://www.iamcal.com/toys/colors/">Color Vision</a>.  Shows the color spectrum as seen by people with various types of colorblindness.</li>
+    <li><a href="http://www.toledo-bend.com/colorblind/Ishihara.html">Ishihara Test for Color Blindness</a> contains a series of images that people with red-green colorblindness see differently, or don't see at all.</li>
+    </ul>
 
-<p></p>
-
-
-<nav aria-label="page navigation">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="day_11_skipping_over_navigation_links.html"><span aria-hidden="true">&laquo;</span> Day 11: Skipping over navigation links</a></li>
-    <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
-    <li class="page-item"><a class="page-link" href="day_13_using_real_links.html">Day 13: Using real links <span aria-hidden="true">&raquo;</span></a></li>
-  </ul>
-</nav>
-</main>
+    <nav aria-label="page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="day_11_skipping_over_navigation_links.html"><span aria-hidden="true">&laquo;</span> Day 11: Skipping over navigation links</a></li>
+        <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
+        <li class="page-item"><a class="page-link" href="day_13_using_real_links.html">Day 13: Using real links <span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </main>
 
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
@@ -120,14 +125,6 @@
 
 
 </div> <!--menu-->
-
-<nav id="navigation" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Day 12: Using color safely</li>
-  </ol>
-</nav>
 
 </body>
 </html>

@@ -25,177 +25,182 @@
     <p class="lead">30 days to a more accessible web site</p>
   </header>
 
+  <nav id="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Day 27: Using real headers</li>
+    </ol>
+  </nav>
+
   <main id="main">
-<h2>Day 27: Using real headers</h2>
-<p class="firstparagraph">Think of your web site as an outline.  The top level is labeled by your site name.  On your home page, you list entries from several days.  So the second level is labeled by your date descriptions: "Tuesday, July 16, 2002", or something similar.  On each day, you make multiple posts, which may each have their own title.  If so, then you have a third level, labeled by your individual post titles.</p>
+    <h2>Day 27: Using real headers</h2>
+    <p class="firstparagraph">Think of your web site as an outline.  The top level is labeled by your site name.  On your home page, you list entries from several days.  So the second level is labeled by your date descriptions: "Tuesday, July 16, 2002", or something similar.  On each day, you make multiple posts, which may each have their own title.  If so, then you have a third level, labeled by your individual post titles.</p>
 
-<p>Now mark up your web site as an outline, using real <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> tags.  Screen readers rely on these tags to interpret the structure of your pages.  Your pages <em>do have</em> a structure, but without proper header tags, screen readers can't find it.  In a minute, I'll show you how to use CSS to make your headers look the same in visual browsers as whatever <code>&lt;font&gt;</code>-based monstrosity you're currently using.</p>
+    <p>Now mark up your web site as an outline, using real <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> tags.  Screen readers rely on these tags to interpret the structure of your pages.  Your pages <em>do have</em> a structure, but without proper header tags, screen readers can't find it.  In a minute, I'll show you how to use CSS to make your headers look the same in visual browsers as whatever <code>&lt;font&gt;</code>-based monstrosity you're currently using.</p>
 
-<h3>Who benefits?</h3>
-<ol>
-<li><a href="day_1_jackie.html">Jackie</a> benefits.  As soon as Jackie hits your page, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> announces that the page has a certain number of links and a certain number of headers.  Jackie can type <kbd>INSERT+F6</kbd> to hear all the headers on your page, or <kbd>CTRL+INSERT+ENTER</kbd> to quickly navigate through your page by skipping to the next header.</li>
-<li><a href="day_2_michael.html">Michael</a> benefits.  In <a href="http://www.opera.com/">Opera</a>, he can type <kbd>S</kbd> to skip to the next header, or <kbd>W</kbd> to skip to the previous one.</li>
-<li><a href="http://www.google.com/">Google</a> benefits.  Google appreciates a well-structured page, and ranks keywords higher when they appear in real header tags.  (Yet another reason to write well-crafted post titles.)</li>
-</ol>
+    <h3>Who benefits?</h3>
+    <ol>
+    <li><a href="day_1_jackie.html">Jackie</a> benefits.  As soon as Jackie hits your page, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> announces that the page has a certain number of links and a certain number of headers.  Jackie can type <kbd>INSERT+F6</kbd> to hear all the headers on your page, or <kbd>CTRL+INSERT+ENTER</kbd> to quickly navigate through your page by skipping to the next header.</li>
+    <li><a href="day_2_michael.html">Michael</a> benefits.  In <a href="http://www.opera.com/">Opera</a>, he can type <kbd>S</kbd> to skip to the next header, or <kbd>W</kbd> to skip to the previous one.</li>
+    <li><a href="http://www.google.com/">Google</a> benefits.  Google appreciates a well-structured page, and ranks keywords higher when they appear in real header tags.  (Yet another reason to write well-crafted post titles.)</li>
+    </ol>
 
-<h3>How to do it: Movable Type</h3>
-<ol>
-<li><p>Define the styles for your site logo.  In your Stylesheet template (<code>styles-sites.css</code>), add the following lines:</p>
+    <h3>How to do it: Movable Type</h3>
+    <ol>
+    <li><p>Define the styles for your site logo.  In your Stylesheet template (<code>styles-sites.css</code>), add the following lines:</p>
 
-<blockquote>
-<pre><code>h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
+    <blockquote>
+    <pre><code>h1, h2, h3 {
+      margin: 0;
+      padding: 0;
+    }
 
-h1 {
-  font-size: 20px;
-  font-weight: normal;
-}
+    h1 {
+      font-size: 20px;
+      font-weight: normal;
+    }
 
-/*/*/a{}
-h1 {font-size: 100%}
-/* */</code></pre>
-</blockquote>
-</li>
+    /*/*/a{}
+    h1 {font-size: 100%}
+    /* */</code></pre>
+    </blockquote>
+    </li>
 
-<li><p>Define your site logo using an <code>&lt;h1&gt;</code> tag.  In your 4 major templates (Main Index, Category Archive, Date-Based Archive, Individual Entry Archive), search for this:</p>
+    <li><p>Define your site logo using an <code>&lt;h1&gt;</code> tag.  In your 4 major templates (Main Index, Category Archive, Date-Based Archive, Individual Entry Archive), search for this:</p>
 
-<blockquote>
-<pre><code>&lt;div id="banner"&gt;
-&lt;$MTBlogName$&gt;&lt;br /&gt;</code></pre>
-</blockquote>
+    <blockquote>
+    <pre><code>&lt;div id="banner"&gt;
+    &lt;$MTBlogName$&gt;&lt;br /&gt;</code></pre>
+    </blockquote>
 
-<p>And replace it with this:</p>
+    <p>And replace it with this:</p>
 
-<blockquote>
-<pre><code>&lt;div id="banner"&gt;
-<strong>&lt;h1&gt;</strong>&lt;$MTBlogName$&gt;<strong>&lt;/h1&gt;</strong></code></pre>
-</blockquote>
-</li>
+    <blockquote>
+    <pre><code>&lt;div id="banner"&gt;
+    <strong>&lt;h1&gt;</strong>&lt;$MTBlogName$&gt;<strong>&lt;/h1&gt;</strong></code></pre>
+    </blockquote>
+    </li>
 
-<li><p>Define your date headers using <code>&lt;h2&gt;</code> tags.  We already have a class defined for these, so we shouldn't need to make any stylesheet changes; we're just changing the tag.  In your 4 major templates, search for this:</p>
+    <li><p>Define your date headers using <code>&lt;h2&gt;</code> tags.  We already have a class defined for these, so we shouldn't need to make any stylesheet changes; we're just changing the tag.  In your 4 major templates, search for this:</p>
 
-<blockquote>
-<pre><code>&lt;div class="date"&gt;	
-&lt;$MTEntryDate format="%B %d, %Y"$&gt;
-&lt;/div&gt;</code></pre>
-</blockquote>
+    <blockquote>
+    <pre><code>&lt;div class="date"&gt;	
+    &lt;$MTEntryDate format="%B %d, %Y"$&gt;
+    &lt;/div&gt;</code></pre>
+    </blockquote>
 
-<p>And replace it with this:</p>
+    <p>And replace it with this:</p>
 
-<blockquote>
-<pre><code>&lt;<strong>h2</strong> class="date"&gt;	
-&lt;$MTEntryDate format="%B %d, %Y"$&gt;
-&lt;/<strong>h2</strong>&gt;</code></pre>
-</blockquote>
-</li>
+    <blockquote>
+    <pre><code>&lt;<strong>h2</strong> class="date"&gt;	
+    &lt;$MTEntryDate format="%B %d, %Y"$&gt;
+    &lt;/<strong>h2</strong>&gt;</code></pre>
+    </blockquote>
+    </li>
 
-<li><p>Define your post titles using <code>&lt;h3&gt;</code> tags.  Again, this only involves changing the tag, not the stylesheet.  In your 4 major templates, search for this:</p>
+    <li><p>Define your post titles using <code>&lt;h3&gt;</code> tags.  Again, this only involves changing the tag, not the stylesheet.  In your 4 major templates, search for this:</p>
 
-<blockquote>
-<p><code>&lt;span class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/span&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code>&lt;span class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/span&gt;</code></p>
+    </blockquote>
 
-<p>And replace it with this:</p>
+    <p>And replace it with this:</p>
 
-<blockquote>
-<p><code>&lt;<strong>h3</strong> class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/<strong>h3</strong>&gt;</code></p>
-</blockquote>
-</li>
-</ol>
+    <blockquote>
+    <p><code>&lt;<strong>h3</strong> class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/<strong>h3</strong>&gt;</code></p>
+    </blockquote>
+    </li>
+    </ol>
 
-<h3>How to do it: Radio</h3>
-<ol>
-<li><p>Define your header styles.  The default Radio themes don't use any real header tags, so we'll need to define these styles ourselves.  (Tailor to suit, but these examples should make your page look the same as it used to in visual browsers.)</p>
-<p>Actually, before we start, search your Home Page Template for "<code>h2 {</code>".  If you find a rule like this, remove it; it's not actually used anywhere, and it'll get in our way:</p>
+    <h3>How to do it: Radio</h3>
+    <ol>
+    <li><p>Define your header styles.  The default Radio themes don't use any real header tags, so we'll need to define these styles ourselves.  (Tailor to suit, but these examples should make your page look the same as it used to in visual browsers.)</p>
+    <p>Actually, before we start, search your Home Page Template for "<code>h2 {</code>".  If you find a rule like this, remove it; it's not actually used anywhere, and it'll get in our way:</p>
 
-<blockquote>
-<p><code>h2 {<br />
-font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold<br />
-}</code></p>
-</blockquote>
-</li>
+    <blockquote>
+    <p><code>h2 {<br />
+    font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold<br />
+    }</code></p>
+    </blockquote>
+    </li>
 
-<li><p>OK, now add these styles, anywhere in the <code>&lt;style&gt;</code> section of your Home Page Template:</p>
+    <li><p>OK, now add these styles, anywhere in the <code>&lt;style&gt;</code> section of your Home Page Template:</p>
 
-<blockquote>
-<pre><code>h1, h2 {
-  margin: 0;
-  padding: 0;
-}
+    <blockquote>
+    <pre><code>h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
 
-h1 {font-size: 24px}
-h2 {font-size: 13px}
+    h1 {font-size: 24px}
+    h2 {font-size: 13px}
 
-/*/*/a{}
-h1 {
-  font-size: large;
-  voice-family: "\"}\"";
-  voice-family: inherit;
-  font-size: x-large;
-}
-html>body h1 {
-  font-size: x-large;
-}
-h2 {
-  font-size: x-small;
-  voice-family: "\"}\"";
-  voice-family: inherit;
-  font-size: small;
-}
-html>body h2 {
-  font-size: small;
-}
-/* */</code></pre>
-</blockquote>
+    /*/*/a{}
+    h1 {
+      font-size: large;
+      voice-family: "\"}\"";
+      voice-family: inherit;
+      font-size: x-large;
+    }
+    html>body h1 {
+      font-size: x-large;
+    }
+    h2 {
+      font-size: x-small;
+      voice-family: "\"}\"";
+      voice-family: inherit;
+      font-size: small;
+    }
+    html>body h2 {
+      font-size: small;
+    }
+    /* */</code></pre>
+    </blockquote>
 
-<p>Note that we're using relative font sizes for our headers in browsers that can support relative font sizes, and absolute font sizes in Netscape 4.  This technique should look familiar; <a href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes">we did the same thing yesterday</a>.</p>
-</li>
+    <p>Note that we're using relative font sizes for our headers in browsers that can support relative font sizes, and absolute font sizes in Netscape 4.  This technique should look familiar; <a href="day_26_using_relative_font_sizes.html" title="Day 26: Using relative font sizes">we did the same thing yesterday</a>.</p>
+    </li>
 
-<li><p>Define the header for your site name.  In your Home Page Template, search for "<code>&lt;%siteName%&gt;</code>" and find a line that looks like this:</p>
+    <li><p>Define the header for your site name.  In your Home Page Template, search for "<code>&lt;%siteName%&gt;</code>" and find a line that looks like this:</p>
 
-<blockquote>
-<p><code>&lt;font size="+2"&gt;&lt;b&gt;&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code>&lt;font size="+2"&gt;&lt;b&gt;&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;</code></p>
+    </blockquote>
 
-<p>And change it to this:</p>
+    <p>And change it to this:</p>
 
-<blockquote>
-<p><code><strong>&lt;h1&gt;</strong>&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;<strong>&lt;/h1&gt;</strong></code></p>
-</blockquote>
-</li>
+    <blockquote>
+    <p><code><strong>&lt;h1&gt;</strong>&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;<strong>&lt;/h1&gt;</strong></code></p>
+    </blockquote>
+    </li>
 
-<li><p>Define the header for your date headers.  In your Day Template, search for "<code>&lt;%longDate%&gt;</code>" and find a line like this:</p>
+    <li><p>Define the header for your date headers.  In your Day Template, search for "<code>&lt;%longDate%&gt;</code>" and find a line like this:</p>
 
-<blockquote>
-<p><code>&lt;b&gt;&lt;%longDate%&gt;&lt;/b&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code>&lt;b&gt;&lt;%longDate%&gt;&lt;/b&gt;</code></p>
+    </blockquote>
 
-<p>And change it to this:</p>
+    <p>And change it to this:</p>
 
-<blockquote>
-<p><code><strong>&lt;h2&gt;</strong>&lt;%longDate%&gt;<strong>&lt;/h2&gt;</strong></code></p>
-</blockquote>
-</li>
-</ol>
+    <blockquote>
+    <p><code><strong>&lt;h2&gt;</strong>&lt;%longDate%&gt;<strong>&lt;/h2&gt;</strong></code></p>
+    </blockquote>
+    </li>
+    </ol>
 
-<h3>Further reading</h3>
-<ul>
-<li><cite>Shirley Kaiser</cite>: <a href="http://www.brainstormsandraves.com/2002_05_12_archive.shtml#76539537">Don't Fake Your Markup</a>: Accessibility Issues for CSS.</li>
-</ul>
+    <h3>Further reading</h3>
+    <ul>
+    <li><cite>Shirley Kaiser</cite>: <a href="http://www.brainstormsandraves.com/2002_05_12_archive.shtml#76539537">Don't Fake Your Markup</a>: Accessibility Issues for CSS.</li>
+    </ul>
 
-<p></p>
-
-
-<nav aria-label="page navigation">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="day_26_using_relative_font_sizes.html"><span aria-hidden="true">&laquo;</span> Day 26: Using relative font sizes</a></li>
-    <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
-    <li class="page-item"><a class="page-link" href="day_28_labeling_form_elements.html">Day 28: Labeling form elements <span aria-hidden="true">&raquo;</span></a></li>
-  </ul>
-</nav>
-</main>
+    <nav aria-label="page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="day_26_using_relative_font_sizes.html"><span aria-hidden="true">&laquo;</span> Day 26: Using relative font sizes</a></li>
+        <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
+        <li class="page-item"><a class="page-link" href="day_28_labeling_form_elements.html">Day 28: Labeling form elements <span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </main>
 
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
@@ -231,14 +236,6 @@ html>body h2 {
 
 
 </div> <!--menu-->
-
-<nav id="navigation" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Day 27: Using real headers</li>
-  </ol>
-</nav>
 
 </body>
 </html>

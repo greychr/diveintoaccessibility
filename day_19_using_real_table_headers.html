@@ -25,118 +25,123 @@
     <p class="lead">30 days to a more accessible web site</p>
   </header>
 
+  <nav id="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Day 19: Using real table headers</li>
+    </ol>
+  </nav>
+
   <main id="main">
-<h2>Day 19: Using real table headers</h2>
-<p class="firstparagraph">If you have a calendar on your web site, it should be rendered as an <acronym title="hypertext markup language">HTML</acronym> table.  There have been a few attempts to create pure-<acronym title="cascading style sheets">CSS</acronym> calendars.  This is misguided; calendars are data tables, and should be marked up as such.</p>
+    <h2>Day 19: Using real table headers</h2>
+    <p class="firstparagraph">If you have a calendar on your web site, it should be rendered as an <acronym title="hypertext markup language">HTML</acronym> table.  There have been a few attempts to create pure-<acronym title="cascading style sheets">CSS</acronym> calendars.  This is misguided; calendars are data tables, and should be marked up as such.</p>
 
-<p>The most important thing about a data table is marking up the headers properly.  In the case of a calendar, this means the days of the week along the top.  You should definitely include headers for the days of the week; if you don't want them actually visible, you can make them invisible with <acronym title="cascading style sheets">CSS</acronym>.  (I do this on my own weblog.)  But the headers need to be there nonetheless, because screen readers rely on them to help blind users navigate through the table without getting lost.</p>
+    <p>The most important thing about a data table is marking up the headers properly.  In the case of a calendar, this means the days of the week along the top.  You should definitely include headers for the days of the week; if you don't want them actually visible, you can make them invisible with <acronym title="cascading style sheets">CSS</acronym>.  (I do this on my own weblog.)  But the headers need to be there nonetheless, because screen readers rely on them to help blind users navigate through the table without getting lost.</p>
 
-<p>The thing about a calendar (and any data table, really, but we're mostly talking about calendars today) is that it's very easy to use if you can see it all at once, but very difficult to use if you can only see one day at a time.  Imagine that you have a day-by-day calendar on your desk, but each page lists only the day of the month, not the day of the week.  Page after page: 1, 2, 3, 4, 5, 6, 7...  Today is 4, which I happen to know is a Thursday.  Now skip ahead to 11, 12, 13.  Quick: which day of the week is 13?  The page doesn't tell you; you have to keep track of it yourself.</p>
+    <p>The thing about a calendar (and any data table, really, but we're mostly talking about calendars today) is that it's very easy to use if you can see it all at once, but very difficult to use if you can only see one day at a time.  Imagine that you have a day-by-day calendar on your desk, but each page lists only the day of the month, not the day of the week.  Page after page: 1, 2, 3, 4, 5, 6, 7...  Today is 4, which I happen to know is a Thursday.  Now skip ahead to 11, 12, 13.  Quick: which day of the week is 13?  The page doesn't tell you; you have to keep track of it yourself.</p>
 
-<p>This is what it's like for a blind user to navigate a calendar without proper headers.  You get a bunch of numbers, but no context to keep track of them.  Adding proper headers to the calendar allows screen reader software to associate the table header (day of the week) with the table data (day of the month), and it reads them together.  "Thursday 4, Thursday 11, Friday 12, Saturday 13."  Oh, it's a Saturday.</p>
+    <p>This is what it's like for a blind user to navigate a calendar without proper headers.  You get a bunch of numbers, but no context to keep track of them.  Adding proper headers to the calendar allows screen reader software to associate the table header (day of the week) with the table data (day of the month), and it reads them together.  "Thursday 4, Thursday 11, Friday 12, Saturday 13."  Oh, it's a Saturday.</p>
 
-<p>Note I said <em>proper</em> headers.  Putting the days of the week in <code class="sgmltag">&lt;td&gt;</code> tags in the first row is not enough.  They need to be <code class="sgmltag">&lt;th&gt;</code> tags instead.  Most weblog templates get this wrong, but it's simple enough to fix, and your calendar will look exactly the same in visual browsers once you're done.</p>
+    <p>Note I said <em>proper</em> headers.  Putting the days of the week in <code class="sgmltag">&lt;td&gt;</code> tags in the first row is not enough.  They need to be <code class="sgmltag">&lt;th&gt;</code> tags instead.  Most weblog templates get this wrong, but it's simple enough to fix, and your calendar will look exactly the same in visual browsers once you're done.</p>
 
-<h3>Who benefits?</h3>
-<ol>
-<li><p><a href="day_1_jackie.html">Jackie</a> benefits.  When she encounters your calendar, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> first <a href="day_18_giving_your_calendar_a_real_caption.html">reads the caption</a>, then announces the headers, then Jackie can hold down <kbd>Control</kbd> + <kbd>ALT</kbd> and move through the table with the arrow keys.  As she moves, JAWS announces the header (day of the week) and the cell data (day of the month).</p>
-<p>All major screen readers allow this kind of table navigation.  <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> allows users to switch to "Table Navigation" mode (<kbd>ALT+T</kbd>), then move through the calendar without holding down additional modifier keys.  Home Page Reader actually goes one step beyond JAWS.  As we'll see in a minute, you can define a shorter (or longer) title for each table header (sort of like <a href="day_14_adding_titles_to_links.html" title="Day 14: Adding titles to links">adding a title to a link</a>), and Home Page Reader will read that instead of the original table header text.  This means you can visually display your days of the week as "Sun", "Mon", "Tue", but you can tell Home Page Reader to read them as "Sunday", "Monday", "Tuesday".  Cool.</p>
-</li>
-</ol>
+    <h3>Who benefits?</h3>
+    <ol>
+    <li><p><a href="day_1_jackie.html">Jackie</a> benefits.  When she encounters your calendar, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> first <a href="day_18_giving_your_calendar_a_real_caption.html">reads the caption</a>, then announces the headers, then Jackie can hold down <kbd>Control</kbd> + <kbd>ALT</kbd> and move through the table with the arrow keys.  As she moves, JAWS announces the header (day of the week) and the cell data (day of the month).</p>
+    <p>All major screen readers allow this kind of table navigation.  <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> allows users to switch to "Table Navigation" mode (<kbd>ALT+T</kbd>), then move through the calendar without holding down additional modifier keys.  Home Page Reader actually goes one step beyond JAWS.  As we'll see in a minute, you can define a shorter (or longer) title for each table header (sort of like <a href="day_14_adding_titles_to_links.html" title="Day 14: Adding titles to links">adding a title to a link</a>), and Home Page Reader will read that instead of the original table header text.  This means you can visually display your days of the week as "Sun", "Mon", "Tue", but you can tell Home Page Reader to read them as "Sunday", "Monday", "Tuesday".  Cool.</p>
+    </li>
+    </ol>
 
-<h3>How to do it</h3>
-<p>If you didn't do it already, make sure your calendar <a href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption">has a real caption</a>.  The <code>&lt;caption&gt;</code> tag must be the first thing after the <code>&lt;table&gt;</code> tag, and the row of <code>&lt;th&gt;</code> tags should be the first thing after that.</p>
+    <h3>How to do it</h3>
+    <p>If you didn't do it already, make sure your calendar <a href="day_18_giving_your_calendar_a_real_caption.html" title="Day 18: Giving your calendar a real caption">has a real caption</a>.  The <code>&lt;caption&gt;</code> tag must be the first thing after the <code>&lt;table&gt;</code> tag, and the row of <code>&lt;th&gt;</code> tags should be the first thing after that.</p>
 
-<p>In Movable Type, find the calendar in your Main Index Template.  (Again, searching for "calendarhead" will probably find it.)  Immediately after the <code>&lt;caption&gt;</code>, you'll see the days of the week defined like this:</p>
+    <p>In Movable Type, find the calendar in your Main Index Template.  (Again, searching for "calendarhead" will probably find it.)  Immediately after the <code>&lt;caption&gt;</code>, you'll see the days of the week defined like this:</p>
 
-<blockquote>
-<p><code class="sgmltag">&lt;tr&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;&lt;/td&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;&lt;/td&gt;<br />
-&lt;/tr&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code class="sgmltag">&lt;tr&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;td align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;&lt;/td&gt;<br />
+    &lt;/tr&gt;</code></p>
+    </blockquote>
 
-<p>Change it to this:</p>
+    <p>Change it to this:</p>
 
-<blockquote>
-<p><code class="sgmltag">&lt;tr&gt;<br />
-&lt;<strong>th abbr="Sunday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Monday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Tuesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Wednesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Thursday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Friday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;<strong>th abbr="Saturday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
-&lt;/tr&gt;</code></p>
-</blockquote>
+    <blockquote>
+    <p><code class="sgmltag">&lt;tr&gt;<br />
+    &lt;<strong>th abbr="Sunday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sun&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Monday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Mon&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Tuesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Tue&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Wednesday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Wed&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Thursday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Thu&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Friday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Fri&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;<strong>th abbr="Saturday"</strong> align="center"&gt;&lt;span class="calendar"&gt;Sat&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+    &lt;/tr&gt;</code></p>
+    </blockquote>
 
-<p>Two things going on here: all the <code class="sgmltag">&lt;td&gt;</code> tags change to <code class="sgmltag">&lt;th&gt;</code>, and they each get an "<code>abbr</code>" attribute to specify the full name of the day of the week.  (The "<code>abbr</code>" attribute can serve a dual purpose.  For very long table headers, it serves as an abbreviation; hence the name.  But for very short table headers, it serves as a longer version, which is what we're doing here.)</p>
+    <p>Two things going on here: all the <code class="sgmltag">&lt;td&gt;</code> tags change to <code class="sgmltag">&lt;th&gt;</code>, and they each get an "<code>abbr</code>" attribute to specify the full name of the day of the week.  (The "<code>abbr</code>" attribute can serve a dual purpose.  For very long table headers, it serves as an abbreviation; hence the name.  But for very short table headers, it serves as a longer version, which is what we're doing here.)</p>
 
-<p>In Radio, the procedure is similar to what you did yesterday, giving the table a real <code>caption</code>.</p>
+    <p>In Radio, the procedure is similar to what you did yesterday, giving the table a real <code>caption</code>.</p>
 
-<ol>
-<li>In Radio, open the actual Radio application.  On Windows, right-click on the little Radio icon in your system tray and select "Open Radio".</li>
-<li>Under the "Tools" menu, select "Developers", then "Jump..." (<kbd>Control+J</kbd>).  Jump to "system.verbs.builtins.radio.weblog.drawCalendar" (no quotes).</li>
-<li><p>Now go to "Edit" menu, "Find and Replace", "Find..." (<kbd>Control+F</kbd>) and find "addDayName".  This should reveal and highlight the <tt>addDayName</tt> function.  Double-click the triangle to reveal the actual function code, which should look like this:</p>
+    <ol>
+    <li>In Radio, open the actual Radio application.  On Windows, right-click on the little Radio icon in your system tray and select "Open Radio".</li>
+    <li>Under the "Tools" menu, select "Developers", then "Jump..." (<kbd>Control+J</kbd>).  Jump to "system.verbs.builtins.radio.weblog.drawCalendar" (no quotes).</li>
+    <li><p>Now go to "Edit" menu, "Find and Replace", "Find..." (<kbd>Control+F</kbd>) and find "addDayName".  This should reveal and highlight the <tt>addDayName</tt> function.  Double-click the triangle to reveal the actual function code, which should look like this:</p>
 
-<blockquote>
-<p><code>on addDayName (name)<br />
-&nbsp;&nbsp;add ("&lt;td width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "&lt;/td&gt;")</code></p>
-</blockquote>
-</li>
-<li><p>Change it to this:</p>
+    <blockquote>
+    <p><code>on addDayName (name)<br />
+    &nbsp;&nbsp;add ("&lt;td width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "&lt;/td&gt;")</code></p>
+    </blockquote>
+    </li>
+    <li><p>Change it to this:</p>
 
-<blockquote>
-<p><code>on addDayName (name<strong>, fullname</strong>)<br />
-&nbsp;&nbsp;add ("<strong>&lt;th abbr=\"" + fullname + "\"</strong> width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "<strong>&lt;/th&gt;</strong>")</code></p>
-</blockquote>
-</li>
+    <blockquote>
+    <p><code>on addDayName (name<strong>, fullname</strong>)<br />
+    &nbsp;&nbsp;add ("<strong>&lt;th abbr=\"" + fullname + "\"</strong> width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "<strong>&lt;/th&gt;</strong>")</code></p>
+    </blockquote>
+    </li>
 
-<li><p>Now double-click on the "<code>for i = 1 to 7</code>" line just below it to see this:</p>
+    <li><p>Now double-click on the "<code>for i = 1 to 7</code>" line just below it to see this:</p>
 
-<blockquote>
-<p><code>for i = 1 to 7<br />
-&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i))</code></p>
-</blockquote>
-</li>
+    <blockquote>
+    <p><code>for i = 1 to 7<br />
+    &nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i))</code></p>
+    </blockquote>
+    </li>
 
-<li><p>And change it to this:</p>
+    <li><p>And change it to this:</p>
 
-<blockquote>
-<p><code>for i = 1 to 7<br />
-&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i)<strong>, radio.string.getLocalizedString ("dayOfWeek." + i)</strong>)</code></p>
-</blockquote>
-</li>
-</ol>
+    <blockquote>
+    <p><code>for i = 1 to 7<br />
+    &nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i)<strong>, radio.string.getLocalizedString ("dayOfWeek." + i)</strong>)</code></p>
+    </blockquote>
+    </li>
+    </ol>
 
-<h3>Very important note about layout tables</h3>
-<p>Tables used exclusively for visual layout have a completely different set of rules.  Do <em>not</em> use <code class="sgmltag">&lt;th&gt;</code> tags on layout tables.  Aside from tweaking your tables to <a href="day_10_presenting_your_main_content_first.html" title="Day 10: Presenting your main content first">present your main content first</a>, there's very little you need to do to make layout tables accessible.  We'll discuss one small thing tomorrow.</p>
+    <h3>Very important note about layout tables</h3>
+    <p>Tables used exclusively for visual layout have a completely different set of rules.  Do <em>not</em> use <code class="sgmltag">&lt;th&gt;</code> tags on layout tables.  Aside from tweaking your tables to <a href="day_10_presenting_your_main_content_first.html" title="Day 10: Presenting your main content first">present your main content first</a>, there's very little you need to do to make layout tables accessible.  We'll discuss one small thing tomorrow.</p>
 
-<h3>Further reading</h3>
-<p>If you need to mark up data tables more complex than a calendar (like tables with multiple levels of headers and subheaders), you're on your own.  Here are some starting points:</p>
+    <h3>Further reading</h3>
+    <p>If you need to mark up data tables more complex than a calendar (like tables with multiple levels of headers and subheaders), you're on your own.  Here are some starting points:</p>
 
-<ul>
-<li><cite title="The Making Connections Unit">Jim Byrne</cite>: <a href="http://www.mcu.org.uk/articles/tables.html">Table Manners</a>.</li>
-<li><cite><acronym title="Web Accessibility in Mind">WebAIM</acronym></cite>: <a href="http://www.webaim.org/tutorials/tables">Create tables that transform gracefully</a>.</li>
-<li><cite title="Idyll Mountain">Kynn Bartlett</cite>: <a href="http://access.idyllmtn.com/tables/">Understanding Accessible Table Markup</a>.</li>
-</ul>
+    <ul>
+    <li><cite title="The Making Connections Unit">Jim Byrne</cite>: <a href="http://www.mcu.org.uk/articles/tables.html">Table Manners</a>.</li>
+    <li><cite><acronym title="Web Accessibility in Mind">WebAIM</acronym></cite>: <a href="http://www.webaim.org/tutorials/tables">Create tables that transform gracefully</a>.</li>
+    <li><cite title="Idyll Mountain">Kynn Bartlett</cite>: <a href="http://access.idyllmtn.com/tables/">Understanding Accessible Table Markup</a>.</li>
+    </ul>
 
-<p></p>
-
-
-<nav aria-label="page navigation">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="day_18_giving_your_calendar_a_real_caption.html"><span aria-hidden="true">&laquo;</span> Day 18: Giving your calendar a real caption</a></li>
-    <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
-    <li class="page-item"><a class="page-link" href="day_20_providing_a_summary_for_tables.html">Day 20: Providing a summary for tables <span aria-hidden="true">&raquo;</span></a></li>
-  </ul>
-</nav>
-</main>
+    <nav aria-label="page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="day_18_giving_your_calendar_a_real_caption.html"><span aria-hidden="true">&laquo;</span> Day 18: Giving your calendar a real caption</a></li>
+        <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
+        <li class="page-item"><a class="page-link" href="day_20_providing_a_summary_for_tables.html">Day 20: Providing a summary for tables <span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </main>
 
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
@@ -172,14 +177,6 @@
 
 
 </div> <!--menu-->
-
-<nav id="navigation" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Day 19: Using real table headers</li>
-  </ol>
-</nav>
 
 </body>
 </html>

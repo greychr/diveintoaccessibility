@@ -25,70 +25,75 @@
     <p class="lead">30 days to a more accessible web site</p>
   </header>
 
+  <nav id="navigation" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Day 7: Identifying your language</li>
+    </ol>
+  </nav>
+
   <main id="main">
-<h2>Day 7: Identifying your language</h2>
-<p class="firstparagraph">You know what language you're writing in, so tell your readers... and their software.</p>
+  <h2>Day 7: Identifying your language</h2>
+    <p class="firstparagraph">You know what language you're writing in, so tell your readers... and their software.</p>
 
-<h3>Who benefits?</h3>
-<ol>
-<li><a href="day_1_jackie.html">Jackie</a> benefits.  Her screen reader software (<a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a>) needs to know what language your pages are written in, so it can pronounce your words properly when it reads them aloud.  If you don't identify your language, JAWS will try to guess what language you're using, and it can guess incorrectly, especially if you quote source code or include other non-language content in your pages.</li>
-<li><a href="http://www.google.com/">Google</a> benefits, even if you are writing in English, but especially if you are writing in some other language.  According to the <a href="http://www.google.com/press/zeitgeist.html">Google Zeitgeist</a>, 50% of Google users search in languages other than English, and many of these users specify in their <a href="http://www.google.com/preferences">Google preferences</a> to only search for pages in specific languages.  Google's language auto-detection algorithms are better than most, but why make Google's job more difficult?</li>
-</ol>
+    <h3>Who benefits?</h3>
+    <ol>
+    <li><a href="day_1_jackie.html">Jackie</a> benefits.  Her screen reader software (<a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a>) needs to know what language your pages are written in, so it can pronounce your words properly when it reads them aloud.  If you don't identify your language, JAWS will try to guess what language you're using, and it can guess incorrectly, especially if you quote source code or include other non-language content in your pages.</li>
+    <li><a href="http://www.google.com/">Google</a> benefits, even if you are writing in English, but especially if you are writing in some other language.  According to the <a href="http://www.google.com/press/zeitgeist.html">Google Zeitgeist</a>, 50% of Google users search in languages other than English, and many of these users specify in their <a href="http://www.google.com/preferences">Google preferences</a> to only search for pages in specific languages.  Google's language auto-detection algorithms are better than most, but why make Google's job more difficult?</li>
+    </ol>
 
-<h3>How to do it</h3>
-<p>First, get the right two-character language code.  The code for English is "<code>en</code>"; the code for French is "<code>fr</code>"; German is "<code>de</code>".  If you're writing in another language, <a href="http://www.loc.gov/standards/iso639-2/englangn.html">look up your language code here</a>.  Language codes are not case-sensitive.</p>
+    <h3>How to do it</h3>
+    <p>First, get the right two-character language code.  The code for English is "<code>en</code>"; the code for French is "<code>fr</code>"; German is "<code>de</code>".  If you're writing in another language, <a href="http://www.loc.gov/standards/iso639-2/englangn.html">look up your language code here</a>.  Language codes are not case-sensitive.</p>
 
-<p>Now put your language code in your <code class="sgmltag">&lt;html&gt;</code> tag.  Exactly how you do this depends on what version of HTML you're using.  <a href="day_6_choosing_a_doctype.html">Look at your <code class="sgmltag">DOCTYPE</code></a>, then do one of the following:</p>
+    <p>Now put your language code in your <code class="sgmltag">&lt;html&gt;</code> tag.  Exactly how you do this depends on what version of HTML you're using.  <a href="day_6_choosing_a_doctype.html">Look at your <code class="sgmltag">DOCTYPE</code></a>, then do one of the following:</p>
 
-<ol>
-<li><p>If you're using any variant of <code class="sgmltag">HTML 4</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (use your own language code if not English):</p>
-<blockquote>
-<p><code class="sgmltag">&lt;html lang="en"&gt;</code></p>
-</blockquote>
-</li>
-<li><p>If you're using any variant of <code class="sgmltag">XHTML 1.0</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (use your language code in both places):</p>
-<blockquote>
-<p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;</code></p>
-</blockquote>
-</li>
-<li><p>If you're using <code class="sgmltag">XHTML 1.1</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (again, insert your own language code):</p>
-<blockquote>
-<p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;</code></p>
-</blockquote>
-</li>
-</ol>
+    <ol>
+    <li><p>If you're using any variant of <code class="sgmltag">HTML 4</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (use your own language code if not English):</p>
+    <blockquote>
+    <p><code class="sgmltag">&lt;html lang="en"&gt;</code></p>
+    </blockquote>
+    </li>
+    <li><p>If you're using any variant of <code class="sgmltag">XHTML 1.0</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (use your language code in both places):</p>
+    <blockquote>
+    <p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;</code></p>
+    </blockquote>
+    </li>
+    <li><p>If you're using <code class="sgmltag">XHTML 1.1</code>, change your <code class="sgmltag">&lt;html&gt;</code> tag to this (again, insert your own language code):</p>
+    <blockquote>
+    <p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"&gt;</code></p>
+    </blockquote>
+    </li>
+    </ol>
 
-<p>Like the <code class="sgmltag">DOCTYPE</code>, you should identify your language on every page of your web site.</p>
+    <p>Like the <code class="sgmltag">DOCTYPE</code>, you should identify your language on every page of your web site.</p>
 
-<p>One additional note: if you have more than one language on a page, you can identify the language on any enclosing element.  For instance, if your web site uses HTML 4 and is primarily in German, but you quote an article in English, you could mark it up like this:</p>
+    <p>One additional note: if you have more than one language on a page, you can identify the language on any enclosing element.  For instance, if your web site uses HTML 4 and is primarily in German, but you quote an article in English, you could mark it up like this:</p>
 
-<blockquote>
-<pre><code class="sgmltag">&lt;html lang="de"&gt;
-  ...
-  &lt;blockquote lang="en"&gt;
-    ...
-  &lt;/blockquote&gt;</code>
-</pre>
-</blockquote>
+    <blockquote>
+    <pre><code class="sgmltag">&lt;html lang="de"&gt;
+      ...
+      &lt;blockquote lang="en"&gt;
+        ...
+      &lt;/blockquote&gt;</code>
+    </pre>
+    </blockquote>
 
-<h3>Further reading</h3>
-<ul>
-<li><a href="http://www.loc.gov/standards/iso639-2/englangn.html">List of language codes</a></li>
-<li><a href="http://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1">The <code class="sgmltag">lang</code> attribute in the <acronym title="hypertext markup language">HTML</acronym> specification</a></li>
-<li><a href="http://lists.w3.org/Archives/Public/w3c-wai-ig/2001AprJun/0713.html">Jim Thatcher on <code class="sgmltag">lang</code> attribute support in screen readers</a>. He describes their language auto-detection algorithms as "flaky", and he would know, since he designed the algorithm for <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>.  Other screen readers have added support for the <code class="sgmltag">lang</code> attribute since his comments were written, but their auto-detection algorithms are still flaky, making it even more important and useful to identify your language.</li>
-</ul>
+    <h3>Further reading</h3>
+    <ul>
+    <li><a href="http://www.loc.gov/standards/iso639-2/englangn.html">List of language codes</a></li>
+    <li><a href="http://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1">The <code class="sgmltag">lang</code> attribute in the <acronym title="hypertext markup language">HTML</acronym> specification</a></li>
+    <li><a href="http://lists.w3.org/Archives/Public/w3c-wai-ig/2001AprJun/0713.html">Jim Thatcher on <code class="sgmltag">lang</code> attribute support in screen readers</a>. He describes their language auto-detection algorithms as "flaky", and he would know, since he designed the algorithm for <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>.  Other screen readers have added support for the <code class="sgmltag">lang</code> attribute since his comments were written, but their auto-detection algorithms are still flaky, making it even more important and useful to identify your language.</li>
+    </ul>
 
-<p></p>
-
-
-<nav aria-label="page navigation">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="day_6_choosing_a_doctype.html"><span aria-hidden="true">&laquo;</span> Day 6: Choosing a DOCTYPE</a></li>
-    <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
-    <li class="page-item"><a class="page-link" href="day_8_constructing_meaningful_page_titles.html">Day 8: Constructing meaningful page titles <span aria-hidden="true">&raquo;</span></a></li>
-  </ul>
-</nav>
-</main>
+    <nav aria-label="page navigation">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="day_6_choosing_a_doctype.html"><span aria-hidden="true">&laquo;</span> Day 6: Choosing a DOCTYPE</a></li>
+        <li class="page-item"><a class="page-link" href="table_of_contents.html">Contents</a></li>
+        <li class="page-item"><a class="page-link" href="day_8_constructing_meaningful_page_titles.html">Day 8: Constructing meaningful page titles <span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </main>
 
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
@@ -124,14 +129,6 @@
 
 
 </div> <!--menu-->
-
-<nav id="navigation" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-    <li class="breadcrumb-item"><a href="table_of_contents.html">Table of contents</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Day 7: Identifying your language</li>
-  </ol>
-</nav>
 
 </body>
 </html>
